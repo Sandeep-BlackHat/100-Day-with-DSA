@@ -163,3 +163,44 @@ int main()
 	}
 	return 0;
 }
+
+[5] //Finding 1st and 2nd Max,Min in an Array With sorting!
+	
+	
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int A[10], x, i, temp, j;
+	
+	printf("--------------------------------------\n");
+	printf("Enter the size of Array needed: ");
+	scanf("%d",&x);
+	printf("--------------------------------------\n");
+	printf("Enter the array: \n");
+	for(i=0; i<x; i++)
+	{
+		scanf("%d",&A[i]);
+	}
+	
+	int max = A[x-1];
+	
+	for(i=0; i<x; i++)
+	{
+		for(j=i; j<x; j++)
+		{
+			if (A[i] > A[j])
+			{
+				temp = A[i];
+				A[i] = A[j];
+				A[j] = temp;
+			}
+		}
+	}
+	printf("The Max in Array is: %d\n",A[x-1]);
+	printf("The 2nd Max in Array is: %d\n",A[x-2]);
+	printf("The Min in Array is: %d\n",A[0]);
+	printf("The 2nd Min in Array is: %d\n",A[1]);
+	return 0;
+}
