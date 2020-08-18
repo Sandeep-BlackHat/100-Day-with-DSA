@@ -1,4 +1,4 @@
-[1] #Sum of Arrays!
+[1] //Sum of Arrays!
 
 #include<stdio.h>
 
@@ -37,7 +37,7 @@ int main()
 }
 
 
-[2] Merging and Sorting Array!
+[2] //Merging and Sorting Array!
 
 #include<stdio.h>
 #include<conio.h>
@@ -111,7 +111,7 @@ int main()
 }
 
 
-[3] Fibonacci Series
+[3] //Fibonacci Series
 
 #include<stdio.h>
 
@@ -131,5 +131,35 @@ int main()
 		n2 = n3;
 	}
 	
+	return 0;
+}
+
+[4] //Reverse Inverted Traingle
+#include<stdio.h>
+
+int main()
+{
+	int i, j, n;
+	printf("Enter the size: "); 
+	scanf("%d",&n);
+	printf("\n");
+	
+	printf("The Inverted Hollow Traingle is: ");
+	printf("\n");
+	for(i=1; i<=n; i++)
+	{	
+		for(j=1; j<= (n * 2 - (2 * i - 1)); j++)
+		{
+			if(i == 1 || j == 1 || j == (n * 2 - (2 * i - 1)))
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
+	}
 	return 0;
 }
